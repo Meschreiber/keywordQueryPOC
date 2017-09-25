@@ -18,5 +18,9 @@ Some Algolia users would like to have keyword suggestions appear as dropdown fro
 
 ### Specific phrase
 
+### Facet
+
+### 
+
 
 
