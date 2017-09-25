@@ -1,20 +1,35 @@
 <!doctype html>
+
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-  <header>
-    <div>
-       <input id="search-input" placeholder="Search for products">
-       <!-- We use a specific placeholder in the input to guides users in their search. -->
-    </div>
-  </header>
-  <main>
-      <div id="hits"></div>
-      <div id="pagination"></div>
-  </main>
-  <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
-  <script src="app.js"></script>
+    <header>
+        <div>
+            <input id="search-input" placeholder="Search for products">
+            <!-- We use a specific placeholder in the input to guides users in their search. -->
+        </div>
+    </header>
+    <main>
+        <div id="hits"></div>
+        <div id="pagination"></div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+    <script src="app.js"></script>
 </body>
+
+<script type="text/html" id="hit-template">
+    <div class="hit">
+        <div class="hit-image">
+            <img src="{{image}}" alt="{{name}}">
+        </div>
+        <div class="hit-content">
+            <h3 class="hit-price">${{price}}</h3>
+            <h2 class="hit-name">{{{_highlightResult.name.value}}}</h2>
+            <p class="hit-description">{{{_highlightResult.description.value}}}</p>
+        </div>
+    </div>
+</script>
