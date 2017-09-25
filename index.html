@@ -1,23 +1,43 @@
 <!doctype html>
+<html>
 
 <head>
+    <title>Keyword POC</title>
     <meta charset="UTF-8">
+    <!-- IE < 10 support -->
+    <!--[if lte IE 9]>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <![endif]-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">
     <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://res.cloudinary.com/hilnmyskv/image/upload/c_fit,w_32,h_32/algolia-mark.ico"
+    />
 </head>
 
 <body>
+    <!-- INTERFACE -->
     <header>
-        <div>
-            <input id="search-input" placeholder="Search for products">
-            <!-- We use a specific placeholder in the input to guides users in their search. -->
-        </div>
+        <div id="search-input"></div>
+        <div id="search-input-icon"></div>
     </header>
     <main>
-        <div id="hits"></div>
-        <div id="pagination"></div>
+        <div id="left-column">
+            <div id="refinement-list"></div>
+        </div>
+        <div id="right-column">
+            <div id="hits"></div>
+            <div id="pagination"></div>
+            <div id="current-refined-values"></div>
+            <div id="clear-all"></div>
+        </div>
     </main>
-    <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+    <footer>
+        Powered by <a href="https://www.algolia.com">Algolia</a> - Data from <a href="https://developer.bestbuy.com">Best Buy</a>
+    </footer>
+    <!-- /INTERFACE -->
+
+    <!-- TEMPLATES -->
     <script type="text/html" id="hit-template">
         <div class="hit">
             <div class="hit-image">
@@ -26,9 +46,19 @@
             <div class="hit-content">
                 <h3 class="hit-price">${{price}}</h3>
                 <h2 class="hit-name">{{{_highlightResult.name.value}}}</h2>
+                <p class="hit-category-breadcrumb">{{{categories}}}</p>
+                <p class="hit-stars">{{{starsLayout}}} ({{popularity}})</p>
                 <p class="hit-description">{{{_highlightResult.description.value}}}</p>
             </div>
         </div>
     </script>
+    <!-- /TEMPLATES -->
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
     <script src="assets/app.js"></script>
+    <!-- /SCRIPTS -->
+
 </body>
+
+</html>
