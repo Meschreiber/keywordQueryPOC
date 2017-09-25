@@ -1,4 +1,4 @@
-var search = instantsearch({
+const search = instantsearch({
     // Replace with your own values
     appId: '5NICTDJ5Q3',
     apiKey: 'fe2708f4939640ae043e0a04008fbb10', // search only API key, no ADMIN key

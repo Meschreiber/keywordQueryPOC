@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/Meschreiber/keywordQueryPOC#readme",
   "dependencies": {
-    "algoliasearch": "^3.24.4"
+    "algoliasearch": "^3.24.4",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1"
   }
 }
