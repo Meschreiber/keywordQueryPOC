@@ -1,0 +1,23 @@
+{
+  "name": "keywordPOC",
+  "version": "1.0.0",
+  "description": "",
+  "main": "import.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meschreiber/keywordQueryPOC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Meschreiber/keywordQueryPOC/issues"
+  },
+  "homepage": "https://github.com/Meschreiber/keywordQueryPOC#readme",
+  "dependencies": {
+    "algoliasearch": "^3.24.4"
+  }
+}
