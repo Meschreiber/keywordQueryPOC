@@ -4,7 +4,8 @@
   "description": "",
   "main": "import.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp dev",
+    "start": "gulp server"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,11 @@
     "url": "https://github.com/Meschreiber/keywordQueryPOC/issues"
   },
   "homepage": "https://github.com/Meschreiber/keywordQueryPOC#readme",
-  "dependencies": {
-    "algoliasearch": "^3.24.4",
-    "browser-sync": "^2.18.13",
+  "devDependencies": {
+    "browser-sync": "^2.12.10",
     "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "algoliasearch": "^3.24.3"
   }
 }
